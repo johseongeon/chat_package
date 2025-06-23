@@ -1,4 +1,4 @@
-package pkg
+package chat_package
 
 import (
 	"context"
