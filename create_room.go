@@ -43,7 +43,7 @@ func CreateRoom(client *mongo.Client, rm *RoomManager) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		EnableCORS(w)
 		roomID := r.URL.Query().Get("room_id")
-		RoomMgr.CreateRoom(roomID)
+		rm.CreateRoom(roomID)
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("created room successfully"))
 	}
